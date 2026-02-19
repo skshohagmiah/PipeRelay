@@ -6,8 +6,7 @@
 
 ## What is PipeRelay?
 
-PipeRelay is a standalone, self-hosted webhook delivery service. You send it events via API, it guarantees delivery to subscriber endpoints with automatic retries, exponential backoff, delivery tracking, and a real-time dashboard.
-
+PipeRelay — Reliable event delivery for your app. One API, every destination. Webhooks, Slack, Discord, email, and more with retries, signing, and a dashboard. Self-hosted, open source.
 Think of it as **Twilio SendGrid but for webhooks** — you don't build email delivery yourself, so why build webhook delivery yourself?
 
 ---
