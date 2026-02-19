@@ -1,0 +1,29 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+  read_timeout: 30s
+  write_timeout: 30s
+
+storage:
+  driver: "sqlite"
+  sqlite:
+    path: "./data/piperelay.db"
+
+delivery:
+  workers: 50
+  timeout: 30s
+  max_attempts: 8
+  retry_schedule: [30s, 2m, 10m, 30m, 2h, 8h, 24h]
+
+dashboard:
+  enabled: true
+  path: "/dashboard"
+  admin_password: ""
+
+logging:
+  level: "info"
+  format: "console"
+
+retention:
+  message_ttl: 720h   # 30 days
+  attempt_ttl: 168h   # 7 days

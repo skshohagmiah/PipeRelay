@@ -1,0 +1,13 @@
+services:
+  piperelay:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - piperelay-data:/data
+      - ./piperelay.yaml:/etc/piperelay/piperelay.yaml:ro
+    command: ["serve", "--config", "/etc/piperelay/piperelay.yaml"]
+    restart: unless-stopped
+
+volumes:
+  piperelay-data:
